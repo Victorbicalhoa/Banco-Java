@@ -12,14 +12,15 @@ public class Main {
         banco.addConta(contaCorrente);
         banco.addConta(contaPoupança);
 
-        // Operações
+        // Operações conta corrente
         System.out.println("Saldo inicial da conta corrente: " + contaCorrente.getSaldo());
-        contaCorrente.depositar(500); // Depósito
+        contaCorrente.depositar(5000); // Depósito
         System.out.println("Saldo após depósito na conta corrente: " + contaCorrente.getSaldo());
         contaCorrente.sacar(1000); // Saque dentro do limite
         System.out.println("Saldo após saque na conta corrente: " + contaCorrente.getSaldo());
-
         System.out.println("\nSaldo inicial da conta poupança: " + contaPoupança.getSaldo());
+
+        //operações conta poupança
         contaPoupança.depositar(2000); // Depósito
         System.out.println("Saldo após depósito na conta poupança: " + contaPoupança.getSaldo());
         contaPoupança.aplicarJuros(contaPoupança.Juros); // Aplicação de juros
@@ -34,7 +35,7 @@ public class Main {
         }
         Conta contaBuscada2 = banco.searchContas(2);
         if (contaBuscada != null) {
-            System.out.println("\nConta encontrada: Número " + contaBuscada.getNumero() + ", Saldo: " + contaBuscada.getSaldo());
+            System.out.println("\nConta encontrada: Número " + contaBuscada2.getNumero() + ", Saldo: " + contaBuscada2.getSaldo());
         } else {
             System.out.println("\nConta não encontrada.");
         }
